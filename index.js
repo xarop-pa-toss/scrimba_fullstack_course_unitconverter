@@ -20,3 +20,13 @@ let sectionDescriptions = [
         p: "20 kilos = 44.092 pounds | 20 pounds = 9.072 kilos"
     }
 ]
+
+// Input field autoresize
+var inputEl = document.getElementById("input-el");
+inputEl.addEventListener('input', resizeInputEl);
+resizeInputEl.call(inputEl);
+
+function resizeInputEl() {
+    this.style.width = this.value.length + "ch";
+    console.log(`Resized to ${this.style.width}`)
+}
